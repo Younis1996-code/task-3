@@ -1,0 +1,196 @@
+.header {
+  max-width: 1820px;
+  height: 152px;
+  margin: 18px auto 0;
+
+  .banner {
+    background-color: #ffdecc;
+    display: flex;
+    max-width: 100%;
+    height: 60px;
+    border: 2px solid #262626;
+    border-radius: 8px;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+
+    .leftBall {
+      max-width: 72px;
+      max-height: 72px;
+      transform: translateY(-10px);
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      -o-transform: translateY(-10px);
+    }
+    .rightBall {
+      max-width: 40px;
+      max-height: 40px;
+      transform: translateY(25px);
+      -webkit-transform: translateY(25px);
+      -moz-transform: translateY(25px);
+      -ms-transform: translateY(25px);
+      -o-transform: translateY(25px);
+    }
+    .bannerText {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+      }
+      .arrow {
+        max-width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+  .nav {
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border: 2px solid #262626;
+    border-radius: 12px;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    position: relative;
+    .logo {
+      background-color: #ff8d4d;
+      max-width: 230px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 2px solid #262626;
+
+      .img {
+        max-width: 35px;
+        max-height: 35px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #262626;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .mobileIcon {
+      display: none;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .link {
+        border-left: 2px solid #262626;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
+
+        a {
+          text-decoration: none;
+          color: #262626;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+      .link.active {
+        background-color: #ffefe5;
+      }
+    }
+    .links .link:last-child {
+      background-color: #ff8d4d;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    margin: 40px 16px 0;
+    .banner {
+      width: 100%;
+      .leftDesign {
+        width: 50px;
+        height: 50px;
+      }
+      .leftBall {
+        position: absolute;
+      }
+      .rightBall {
+        position: absolute;
+        right: 0;
+      }
+      .rightDesign {
+        width: 50px;
+        height: 50px;
+      }
+      .bannerText {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        p {
+          font-size: 16px;
+          width: fit-content;
+          white-space: nowrap;
+        }
+        .arrow {
+          max-width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .nav {
+      width: 100%;
+      position: relative;
+      .mobileIcon {
+        display: block;
+        background-color: #ffefe5;
+        padding: 16px 30px;
+        border-left: 2px solid #262626;
+
+        .mobIco {
+          width: 28px;
+          height: 28px;
+          margin: auto;
+        }
+      }
+      .menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #ffdecc;
+        width: 100%;
+        padding-bottom: 10px;
+        border: 2px solid #262626;
+        border-radius: 12px;
+
+        .linkss {
+          margin: 10px;
+          .link {
+            margin-bottom: 10px;
+            a {
+              text-decoration: none;
+              color: #262626;
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .links {
+        display: none;
+      }
+    }
+  }
+}

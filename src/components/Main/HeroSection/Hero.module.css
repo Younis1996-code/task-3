@@ -1,0 +1,118 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  .heroImage {
+    .image {
+      max-width: 765px;
+      max-height: 785px;
+    }
+  }
+  .heroContent {
+    .firstP {
+      font-weight: 500;
+      font-size: 22px;
+      border-bottom: 2px solid #262626;
+      width: fit-content;
+    }
+    h1 {
+      font-weight: 800;
+      font-size: 54px;
+      line-height: 130%;
+      font-family: "Raleway", sans-serif;
+      color: #1a1a1a;
+
+      span {
+        color: #ffae80;
+      }
+    }
+    .secondP {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+      color: #333333;
+      margin-top: clamp(18px, 5vw, 30px);
+    }
+    .results {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 13px;
+      padding: 24px 50px;
+      border: 2px solid #262626;
+      background-color: #ffefe5;
+      box-shadow: 8px 8px 0px 1px #ffbe99;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+      margin-top: clamp(40px, 5vw, 60px);
+      h2 {
+        font-weight: 800;
+        font-size: 44px;
+        line-height: 150%;
+        color: #262626;
+      }
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    .heroImage {
+      .image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .heroContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      .firstP {
+        font-size: 16px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+      }
+      .secondP {
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .results {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        div {
+          width: 100%;
+          border-bottom: 2px solid #262626;
+          padding-bottom: 20px;
+        }
+        h2 {
+          text-align: center;
+        }
+        p {
+          font-size: 16px;
+          text-align: center;
+
+          width: 100%;
+        }
+        div:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
