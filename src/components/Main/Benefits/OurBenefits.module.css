@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .benefits {
     margin-top: 80px;
     .head {
@@ -105,6 +105,8 @@
       .benef {
         position: relative;
         margin-bottom: 40px;
+        flex: 1 1 100%;
+        width: 100%;
         .benefitIcon {
           width: 56px;
           height: 56px;
@@ -127,6 +129,129 @@
       }
       .benef:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .benefits {
+    margin-top: 80px;
+    .head {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 38px;
+    }
+    p {
+      font-size: 16px;
+      /* max-width: 80%; */
+    }
+    .ben {
+      /* flex-direction: column; */
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 50px;
+      .benef {
+        position: relative;
+        margin-bottom: 40px;
+        flex: 1 1 40%;
+        /* width: 100%; */
+        .benefitIcon {
+          width: 56px;
+          height: 56px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .benefitText {
+          height: 225px;
+          h4 {
+            text-align: center;
+            font-size: 22px;
+          }
+          p {
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+      .benef:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    .head {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 38px;
+      margin: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .ben {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 80px;
+      flex-wrap: wrap;
+      .benef {
+        flex: 1 1 30%;
+        position: relative;
+        margin-bottom: 50px;
+        .benefitIcon {
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+          background-color: #ffdecc;
+          width: 56px;
+          height: 56px;
+          border: 2px solid #262626;
+          border-radius: 12px;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          -ms-border-radius: 12px;
+          -o-border-radius: 12px;
+          padding: 20px;
+          text-align: center;
+          position: absolute;
+          top: -11.183%;
+          left: 10.6825%;
+        }
+        .benefitText {
+          border: 2px solid #262626;
+          border-radius: 12px;
+          background-color: #ffffff;
+          /* padding: 60px 40px 40px; */
+          /* min-height: 240px; */
+
+          h4 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 130%;
+            margin-bottom: 20px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: #333333;
+            text-align: left;
+            padding-bottom: 30px;
+          }
+        }
       }
     }
   }

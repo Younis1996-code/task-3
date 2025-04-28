@@ -102,7 +102,7 @@
         font-size: clamp(16px, 5vw, 20px);
         line-height: 150%;
         color: #333333;
-        margin: clamp(30px, 5vw, 50px) 0 clamp(40px, 5vw, 80px);
+        margin: clamp(30px, 5vw, 50px) auto clamp(40px, 5vw, 80px);
       }
       button {
         width: 100%;
@@ -137,7 +137,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .benefits {
     margin-top: 80px;
     .head {
@@ -166,6 +166,162 @@
       button {
         a {
           font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .benefits {
+    margin-top: 80px;
+    .head {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 38px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      max-width: 80%;
+    }
+  }
+  .pageNav {
+    flex-direction: column;
+    /* margin-top: 50px; */
+    .page {
+      .label {
+        h2 {
+          font-size: 28px;
+        }
+      }
+      p {
+        font-size: 16px;
+        width: 100%;
+      }
+      button {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .benefits {
+    margin-top: 150px;
+    .head {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 38px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      max-width: 80%;
+    }
+  }
+  .pageNav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px 40px;
+    margin-top: clamp(50px, 5vw, 100px);
+    flex-wrap: wrap;
+    .page {
+      flex: 1 1 calc(50% - 25px);
+      border: 2px solid #262626;
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 60px;
+      min-height: 757px;
+
+      .label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        h2 {
+          font-family: "Raleway", sans-serif;
+          font-weight: 700;
+          font-size: 34px;
+          line-height: 130%;
+          color: #1a1a1a;
+        }
+        .underLine {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .emptyDiv {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 2px solid #262626;
+          }
+          .spans {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            box-sizing: border-box;
+
+            .oSpan {
+              height: 12px;
+              flex: 1;
+              background-color: #ffbe99;
+              padding: 6px;
+              .iSpan {
+                height: 2px;
+                width: 100%;
+                background-color: #262626;
+              }
+            }
+          }
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #333333;
+        margin: clamp(30px, 5vw, 50px) auto 0;
+      }
+      button {
+        width: 100%;
+        border: none;
+        border: 2px solid #262626;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffdecc;
+        padding: 18px 0;
+        box-shadow: 4px 4px 0px 2px #1e1e1e;
+        /* margin-top: 25%; */
+
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 150%;
+          color: #333333;
+        }
+        .icon {
+          width: 18px;
+          height: 21px;
         }
       }
     }
