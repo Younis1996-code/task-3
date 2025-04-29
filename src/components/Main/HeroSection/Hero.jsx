@@ -2,7 +2,7 @@ import heroPhoto from "../../../assets/images/hero/hero.png";
 import styles from "./Hero.module.css";
 const Hero = () => {
   return (
-    <div id="" className={styles.hero}>
+    <div id="#" className={styles.hero}>
       <div className={styles.heroImage}>
         <img className={styles.image} src={heroPhoto} alt="hero" />
       </div>
