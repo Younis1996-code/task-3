@@ -156,7 +156,7 @@ footer {
         .logo {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 10px;
           margin-bottom: 16px;
           img {
@@ -171,7 +171,7 @@ footer {
         p {
           font-size: 16px;
           margin-bottom: 40px;
-          text-align: center;
+          /* text-align: center; */
         }
         .conDiv {
           .iconDiv {
@@ -219,8 +219,8 @@ footer {
         .rightText {
           padding-right: 6px;
           margin-right: 6px;
-          font-size: 14px;
-          white-space: nowrap;
+          font-size: 11px;
+          /* white-space: nowrap; */
         }
         .rightText:last-child {
           border: none;
@@ -256,7 +256,7 @@ footer {
       width: 100%;
       .firstCol {
         flex: 1 1 100%;
-        width: 100%;
+        max-width: 100%;
         .logo {
           display: flex;
           align-items: center;

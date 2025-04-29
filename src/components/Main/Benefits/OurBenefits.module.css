@@ -66,7 +66,7 @@
         border-radius: 12px;
         background-color: #ffffff;
         padding: clamp(50px, 5vw, 80px) clamp(20px, 5vw, 40px);
-        height: 306px;
+        min-height: 306px;
 
         h4 {
           font-weight: 700;
@@ -165,7 +165,7 @@
         }
 
         .benefitText {
-          height: 225px;
+          min-height: 225px;
           h4 {
             text-align: center;
             font-size: 22px;
@@ -204,7 +204,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 0 40px;
       margin-top: 80px;
       flex-wrap: wrap;
       .benef {
@@ -234,8 +234,8 @@
           border: 2px solid #262626;
           border-radius: 12px;
           background-color: #ffffff;
-          /* padding: 60px 40px 40px; */
-          /* min-height: 240px; */
+          padding: 60px 40px 40px;
+          min-height: 240px;
 
           h4 {
             font-weight: 700;
@@ -249,7 +249,7 @@
             line-height: 150%;
             color: #333333;
             text-align: left;
-            padding-bottom: 30px;
+            padding-bottom: 0;
           }
         }
       }
