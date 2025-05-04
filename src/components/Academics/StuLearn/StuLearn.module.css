@@ -1,0 +1,201 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(80px, 10vw, 200px);
+  .head {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    width: fit-content;
+    padding: 10px 20px;
+    color: #333333;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #ffffff;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #1a1a1a;
+    margin: 20px;
+    font-family: "Raleway", sans-serif;
+  }
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #333333;
+    max-width: 992px;
+    text-align: center;
+  }
+  .acaStud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-top: clamp(50px, 10vw, 100px);
+    .acaStudItem {
+      flex: 0 0 32%;
+      background-color: #ffffff;
+      border: 2px solid #262626;
+      box-shadow: 6px 6px 0px 2px #1e1e1e;
+      border-radius: 12px;
+      margin-bottom: clamp(40px, 10vw, 50px);
+      padding: 0 50px 50px;
+      position: relative;
+      .studUp {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+
+        .empDiv {
+          width: 31.407%;
+          min-height: 380px;
+          background-color: #ffefe5;
+          border: 2px solid #262626;
+          border-top: none;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+          position: relative;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+        }
+        .imaDiv {
+          position: absolute;
+          /*left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          */
+          left: 50%;
+          transform: translateX(-50%);
+          top: 9%;
+          bottom: 6%;
+          width: 100%;
+          height: 85%;
+          border-radius: 12px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+      }
+      .studDown {
+        margin-top: clamp(14px, 10vw, 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          font-weight: 700;
+          font-family: "Raleway", sans-serif;
+          line-height: 130%;
+          color: #1a1a1a;
+          font-size: 28px;
+          margin-bottom: clamp(10px, 10vw, 20px);
+        }
+        p {
+          font-weight: 500;
+          line-height: 150%;
+          color: #4c4c4d;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .benefits {
+    .head {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 38px;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+    }
+    .acaStud {
+      flex-direction: column;
+
+      .acaStudItem {
+        flex: 0 0 100%;
+        padding: 0 30px 30px;
+
+        .studUp {
+          .empDiv {
+            min-height: 237px;
+          }
+        }
+        .studDown {
+          margin-top: 14px;
+          h4 {
+            font-weight: 700;
+            font-family: "Raleway", sans-serif;
+            line-height: 130%;
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-weight: 500;
+            line-height: 150%;
+            color: #4c4c4d;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1440px) {
+  .benefits {
+    .head {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .acaStud {
+      .acaStudItem {
+        flex: 0 0 32%;
+
+        .studUp {
+          .empDiv {
+            min-height: 282px;
+          }
+        }
+        .studDown {
+          margin-top: 18px;
+
+          h4 {
+            font-size: 24px;
+            margin-bottom: 14px;
+            text-align: center;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import styles from "./PageNav.module.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 const PageNav = (props) => {
   return (
-    <div id="student-life" className={styles.benefits}>
+    <div className={styles.benefits}>
       <div className={styles.head}>Explore More</div>
       <h3>Navigate through our Pages</h3>
       <p>
@@ -42,7 +43,7 @@ const PageNav = (props) => {
             </div>
             <p>{page.parag}</p>
             <button>
-              <a href={page.link}>Learn More</a>
+              <Link to={page.link}>Learn More</Link>
               <FaArrowRightLong className={styles.icon} />
             </button>
           </div>

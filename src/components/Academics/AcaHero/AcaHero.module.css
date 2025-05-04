@@ -1,0 +1,146 @@
+.hero {
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 8px 8px 0px 1px #1e1e1e;
+  padding: clamp(50px, 10vw, 150px) 6.5934%;
+  height: fit-content;
+  position: relative;
+
+  .shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(100px, 10vw, 200px);
+    height: clamp(100px, 10vw, 200px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .heroCon {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    gap: 2.7472%;
+
+    position: relative;
+
+    .heroHead {
+      flex: 0 0 48.6264%;
+      button {
+        max-width: fit-content;
+        max-height: 47px;
+        padding: 10px 20px;
+        border: none;
+        border: 2px solid #262626;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        background-color: #ffffff;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        cursor: pointer;
+      }
+      .heroTitle {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 130%;
+        color: #262626;
+        font-family: "Raleway", sans-serif;
+        margin-top: clamp(10px, 10vw, 15px);
+      }
+    }
+    .heroDesc {
+      .heroPar {
+        font-weight: 500;
+        font-size: clamp(16px, 10vw, 20px);
+        line-height: 150%;
+        color: #333333;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    z-index: -3;
+    .shape {
+      z-index: -2;
+    }
+    .heroCon {
+      display: block;
+      text-align: center;
+      z-index: -1;
+
+      .heroHead {
+        button {
+          font-size: 14px;
+        }
+        .heroTitle {
+          font-size: 28px;
+          margin-top: 10px;
+        }
+      }
+      .heroDesc {
+        .heroPar {
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .hero {
+    .heroCon {
+      .heroHead {
+        button {
+          font-size: 16px;
+        }
+        .heroTitle {
+          font-size: 34px;
+        }
+      }
+      .heroDesc {
+        .heroPar {
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+  .hero {
+    .heroCon {
+      .heroHead {
+        button {
+          font-size: 16px;
+        }
+        .heroTitle {
+          font-size: 38px;
+        }
+      }
+      .heroDesc {
+        .heroPar {
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

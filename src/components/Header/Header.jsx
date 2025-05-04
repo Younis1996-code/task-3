@@ -7,9 +7,10 @@ import styles from "./Header.module.css";
 import logo from "../../assets/images/Header/nav/logo.png";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = (props) => {
-  const [activeDiv, setActiveDiv] = useState("Home");
+  const [activeDiv, setActiveDiv] = useState(props.navLinks[0].name);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const clickHandler = (activeName) => {
@@ -40,9 +41,7 @@ const Header = (props) => {
       <nav className={styles.nav}>
         <div className={styles.logo}>
           <img src={logo} alt="logo" />
-          <a href="/" onClick={(e) => e.preventDefault()}>
-            Little Learners
-          </a>
+          <Link to="/">Little Learners</Link>
         </div>
 
         <div className={styles.mobileIcon}>
@@ -64,7 +63,14 @@ const Header = (props) => {
                   key={link.id}
                   onClick={() => clickHandler(link.name)}
                 >
-                  <a href={link.link}>{link.name}</a>
+                  <NavLink
+                    to={link.link}
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
                 </div>
               ))}
             </div>
@@ -80,9 +86,15 @@ const Header = (props) => {
                   key={link.id}
                   onClick={(e) => clickHandler(link.name)}
                 >
-                  <a key={link.id} href={link.link}>
+                  <NavLink
+                    key={link.id}
+                    to={link.link}
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
                     {link.name}
-                  </a>
+                  </NavLink>
                 </div>
               );
             })}

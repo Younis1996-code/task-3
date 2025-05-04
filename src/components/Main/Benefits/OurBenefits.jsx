@@ -1,7 +1,7 @@
 import styles from "./OurBenefits.module.css";
 const OurBenefits = (props) => {
   return (
-    <div id="about-us" className={styles.benefits}>
+    <div className={styles.benefits}>
       <div className={styles.head}>Children Deserve Bright Future</div>
       <h3>Our Benefits</h3>
       <p>

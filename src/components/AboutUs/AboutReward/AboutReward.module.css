@@ -1,0 +1,212 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(80px, 10vw, 200px);
+}
+
+.head {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  width: fit-content;
+  padding: 10px 20px;
+  color: #333333;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.benefits h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  color: #1a1a1a;
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.benefits p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #333333;
+  /* max-width: 992px; */
+  text-align: center;
+}
+
+.AbReward {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: clamp(50px, 5vw, 100px);
+  position: relative;
+}
+
+.sliCon {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-top: clamp(29px, 5vw, 40px);
+  /* height: fit-content; */
+}
+
+.AbRewardSlider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  gap: 2.1978%;
+}
+
+.rew {
+  border: 2px solid #262626;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px 2px #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 31.3%;
+  padding: clamp(50px, 5vw, 80px) clamp(30px, 5vw, 50px) clamp(30px, 5vw, 50px);
+}
+
+.rewImg {
+  width: clamp(56px, 5vw, 74px);
+  height: clamp(56px, 5vw, 74px);
+  border: 2px solid #262626;
+  border-radius: 12px;
+  background-color: #ffdecc;
+  position: absolute;
+  top: -7%;
+  left: 5.9405%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: clamp(24px, 10vw, 34px);
+    height: clamp(24px, 10vw, 34px);
+  }
+}
+
+.rewText {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 10vw, 20px);
+}
+
+.rewText h4 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+}
+
+.rewText p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: left;
+}
+
+.downBtnDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(30px, 10vw, 50px);
+  width: 100%;
+}
+
+.downBtnDiv p {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+
+.btnDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.sliBtnDiv {
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.sliBtnDiv:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.sliBtn {
+  font-size: 18px;
+  color: #333333;
+}
+
+@media (max-width: 992px) {
+  .head {
+    font-size: 14px;
+  }
+
+  .benefits h3 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .benefits p {
+    font-size: 16px;
+  }
+
+  .AbRewardSlider {
+    gap: 0;
+  }
+  .rew {
+    flex: 0 0 100%;
+  }
+  .rewImg {
+    top: -9%;
+    left: 5.9405%;
+  }
+  .rewText h4 {
+    font-size: 22px;
+  }
+  .rewText p {
+    font-size: 16px;
+  }
+  .downBtnDiv p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1440px) {
+  .head {
+    font-size: 14px;
+  }
+
+  .benefits h3 {
+    font-size: 38px;
+  }
+
+  .benefits p {
+    font-size: 16px;
+  }
+
+  .rewText h4 {
+    font-size: 22px;
+  }
+  .rewText p {
+    font-size: 16px;
+  }
+  .downBtnDiv p {
+    font-size: 18px;
+  }
+}

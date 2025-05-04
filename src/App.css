@@ -1,5 +1,6 @@
 main {
   margin: 80px 160px 200px;
+  font-family: "Outfit", sans-serif;
 }
 
 @media screen and (max-width: 992px) {

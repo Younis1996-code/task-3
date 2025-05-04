@@ -1,12 +1,30 @@
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import styles from "./OurTest.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 const OurTest = (props) => {
   const [currentTest, setCurrentTest] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 993) {
+        setItemsToShow(1);
+      } else {
+        setItemsToShow(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const nextTest = () => {
-    if (currentTest < props.ourTestimonials.length - 1) {
+    if (currentTest < props.ourTestimonials.length - itemsToShow) {
       setCurrentTest(currentTest + 1);
     }
   };
@@ -16,8 +34,9 @@ const OurTest = (props) => {
       setCurrentTest(currentTest - 1);
     }
   };
+
   return (
-    <div id="academics" className={styles.benefits}>
+    <div className={styles.benefits}>
       <div className={styles.head}>Their Happy Words 🤗</div>
       <h3>Our Testimonials</h3>
       <p>
@@ -25,18 +44,15 @@ const OurTest = (props) => {
         we provide, where children flourish both academically and emotionally.
       </p>
       <div className={styles.tes}>
-        <div
-          className={styles.testContainer}
-          style={{ "--current-test": currentTest }}
-        >
-          {props.ourTestimonials.map((testimonial) => {
-            return (
-              <div
-                key={testimonial.id}
-                className={`${styles.test} ${
-                  testimonial.id === currentTest ? styles.active : ""
-                }`}
-              >
+        <div className={styles.testContainer}>
+          <div
+            className={styles.testSlider}
+            style={{
+              transform: `translateX(-${currentTest * (100 / itemsToShow)}%)`,
+            }}
+          >
+            {props.ourTestimonials.map((testimonial) => (
+              <div key={testimonial.id} className={styles.test}>
                 <div className={styles.testImg}>
                   <img src={testimonial.image} alt="testimonial" />
                 </div>
@@ -46,9 +62,10 @@ const OurTest = (props) => {
                   <p>{testimonial.para}</p>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
+
         <button
           className={styles.btnLeft}
           onClick={prevTest}
@@ -60,7 +77,7 @@ const OurTest = (props) => {
         <button
           className={styles.btnRight}
           onClick={nextTest}
-          disabled={currentTest === props.ourTestimonials.length - 1}
+          disabled={currentTest === props.ourTestimonials.length - itemsToShow}
         >
           <FaArrowRightLong className={styles.icon} />
         </button>

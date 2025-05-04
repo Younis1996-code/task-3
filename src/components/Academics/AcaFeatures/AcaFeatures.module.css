@@ -1,0 +1,160 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(80px, 10vw, 200px);
+  .head {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    width: fit-content;
+    padding: 10px 20px;
+    color: #333333;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    background-color: #ffffff;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    color: #1a1a1a;
+    margin: 20px;
+    font-family: "Raleway", sans-serif;
+  }
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #333333;
+    max-width: 992px;
+    text-align: center;
+  }
+  .feaSp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-top: clamp(78px, 10vw, 137px);
+    .feaItem {
+      flex: 0 0 32%;
+      background-color: #ffffff;
+      border: 2px solid #262626;
+      box-shadow: 6px 6px 0px 2px #1e1e1e;
+      border-radius: 12px;
+      margin-bottom: clamp(68px, 10vw, 87px);
+      padding: 80px 50px 50px;
+      position: relative;
+
+      .feaIcon {
+        width: clamp(56px, 10vw, 74px);
+        height: clamp(56px, 10vw, 74px);
+        background-color: #ffdecc;
+        border: 2px solid #262626;
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 10%;
+        top: -37px;
+      }
+      .feaCon {
+        h4 {
+          font-weight: 700;
+          font-family: "Raleway", sans-serif;
+          line-height: 130%;
+          color: #1a1a1a;
+          font-size: 28px;
+          margin-bottom: clamp(16px, 10vw, 20px);
+        }
+        p {
+          font-weight: 500;
+          line-height: 150%;
+          color: #4c4c4d;
+          text-align: left;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .benefits {
+    .head {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 38px;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+    }
+    .feaSp {
+      flex-direction: column;
+
+      .feaItem {
+        flex: 0 0 100%;
+        padding: 50px 40px 30px 30px;
+
+        .feaIcon {
+          width: 56px;
+          height: 56px;
+          left: 10%;
+          top: -28px;
+          padding: 16px;
+        }
+        .feaCon {
+          h4 {
+            font-size: 22px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1440px) {
+  .benefits {
+    .head {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .feaSp {
+      .feaItem {
+        padding: 60px 40px 40px;
+
+        .feaIcon {
+          width: 56px;
+          height: 56px;
+          padding: 16px;
+          left: 10%;
+          top: -28px;
+        }
+        .feaCon {
+          h4 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ const Faq = (props) => {
   };
 
   return (
-    <div id="admissions" className={styles.benefits}>
+    <div className={styles.benefits}>
       <div className={styles.head}>Solutions For The Doubts</div>
       <h3>Frequently Asked Questions</h3>
       <p>

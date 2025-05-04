@@ -5,7 +5,7 @@ import { FaFacebook, FaLinkedin, FaPhoneAlt, FaTwitter } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 const Footer = () => {
   return (
-    <footer id="contact">
+    <footer>
       <div className={styles.top}>
         <div className={styles.firstCol}>
           <div className={styles.logo}>
